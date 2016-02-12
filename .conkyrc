@@ -1,0 +1,22 @@
+own_window yes
+own_window_type override
+cwn_window_colour 000000
+own_window_transparent no
+double_buffer yes
+cpu_avg_samples 2
+net_avg_samples 2
+use_xft yes
+xftfont Andale Mono-10
+output_to_console no
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+update_interval 1 
+minimum_size 1920 12
+maximum_width 1920
+default_color white
+alignment bm
+no_buffers yes
+uppercase no
+short_units yes
+
+TEXT
+${alignc}$nodename ${color #660066}::${color #ffffff} Uptime: $uptime_short ${color #660066}::${color #ffffff} ~: ${fs_used /}/${fs_size /} ${color #660066}::${color #ffffff} home: ${fs_used /home}/${fs_size /home} ${color #660066}::${color #ffffff} RAM: $mem/$memmax ${color #660066}::${color #ffffff} Volume: ${exec amixer get Headphone | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%
