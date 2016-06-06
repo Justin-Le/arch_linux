@@ -1,6 +1,6 @@
 # Arch Linux configurations.
 
-Configuration files for some packages that I think are essential to my Arch Linux experience.
+Configuration files for some packages I use in Arch.
 
-* Xresources is for urxvt, the terminal emulator.
-* config.h is for dwm, the window manager.
+* Xresources modifies urxvt, the terminal emulator.
+* config.h modifies dwm, the window manager.

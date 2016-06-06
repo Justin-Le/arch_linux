@@ -1,3 +1,26 @@
+" Inspired by Jake Zimmerman <jake@zimmerman.io> <https://github.com/jez/vim-as-an-ide>
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/syntastic'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'ervandew/supertab'
+Plugin 'Raimondi/delimitMate'
+Plugin 'christoomey/vim-tmux-navigator'
+
+call vundle#end()
+
 :set number shiftwidth=4 softtabstop=4 expandtab showcmd lazyredraw
 :set number shiftwidth=4 softtabstop=4 expandtab showcmd lazyredraw
 
@@ -10,9 +33,10 @@
 " Prepare to search globally
 :nnoremap <leader>s :%s/
 
-" Insert theano.
-:nnoremap <leader>t itheano.
-:nnoremap <leader>np inumpy.
+" Insert common library
+:nnoremap <leader>np iimport<Space>numpy<Space>as<Space>np<Enter><Esc>
+:nnoremap <leader>plt iimport<Space>matplotlib.pyplot<Space>as<Space>plt<Enter><Esc>
+:nnoremap <leader>pd iimport<Space>pandas<Space>as<Space>pd<Enter><Esc>
 
 " Move cursor to the character after the next underscore
 :nnoremap <leader>- f_l
@@ -61,6 +85,7 @@
 " Write, then suspend Vim
 :nnoremap <leader><C-z> :w<Enter><C-z>
 
-" let g:tex_flavor = "tex"
+let g:tex_flavor = "tex"
 :filetype plugin on
 :syntax on
+:set number
