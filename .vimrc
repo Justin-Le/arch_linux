@@ -26,6 +26,11 @@ call vundle#end()
 
 :let mapleader = "-"
 
+" Navigate tabs
+:set switchbuf=usetab
+:nnoremap <F8> :tabnext<CR>
+:nnoremap <leader><F8> :tabprevious<CR>
+
 " Write, then quit
 :nnoremap <leader>w :w<Enter>:q<Enter>
 :nnoremap <leader>q :w<Enter>:q<Enter>
