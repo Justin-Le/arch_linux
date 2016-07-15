@@ -1,4 +1,5 @@
 " Inspired by Jake Zimmerman <jake@zimmerman.io> <https://github.com/jez/vim-as-an-ide>
+" Run vim +PluginInstall +qall
 
 set nocompatible
 filetype off
@@ -9,6 +10,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
@@ -89,6 +91,12 @@ call vundle#end()
 
 " Write, then suspend Vim
 :nnoremap <leader><C-z> :w<Enter><C-z>
+
+" Add a space beside comment delimiters in NERDcommenter
+let g:NERDSpaceDelims = 1
+
+" Latex
+:nnoremap <leader>list i\begin{list}<Enter>\item<Enter>\item<Space><Esc>kA<Space>
 
 let g:tex_flavor = "tex"
 :filetype plugin on
