@@ -96,7 +96,13 @@ call vundle#end()
 let g:NERDSpaceDelims = 1
 
 " Latex
-:nnoremap <leader>list i\begin{list}<Enter>\item<Enter>\item<Space><Esc>kA<Space>
+:nnoremap <leader>item i\begin{itemize}<Enter>\item<Enter>\item<Space><Esc>kA<Space>
+
+:nnoremap <leader>4 i$<Esc>El
+:nnoremap <leader>[ i\[<Esc>E
+:nnoremap <leader>] a\]<Esc>E
+
+:nnoremap <leader>it i\textit{<Esc>E
 
 let g:tex_flavor = "tex"
 :filetype plugin on
