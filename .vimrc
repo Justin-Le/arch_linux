@@ -70,9 +70,7 @@ call vundle#end()
 """"""""""""""""""""""""""""""""""""""""
 
 " Insert numpy, pandas, pyplot
-:nnoremap <leader>npp iimport<Space>numpy<Space>as<Space>np<Enter><Esc>
-                      iimport<Space>pandas<Space>as<Space>pd<Enter><Esc>
-                      iimport<Space>matplotlib.pyplot<Space>as<Space>plt<Enter><Esc>
+:nnoremap <leader>npp iimport<Space>numpy<Space>as<Space>np<Enter>import<Space>pandas<Space>as<Space>pd<Enter>import<Space>matplotlib.pyplot<Space>as<Space>plt<Enter><Esc>
 :nnoremap <leader>np iimport<Space>numpy<Space>as<Space>np<Enter><Esc>
 :nnoremap <leader>pd iimport<Space>pandas<Space>as<Space>pd<Enter><Esc>
 :nnoremap <leader>plt iimport<Space>matplotlib.pyplot<Space>as<Space>plt<Enter><Esc>
