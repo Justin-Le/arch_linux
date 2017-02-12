@@ -69,11 +69,11 @@ call vundle#end()
 " Libraries
 """"""""""""""""""""""""""""""""""""""""
 
-" Insert numpy, pandas, pyplot
-:nnoremap <leader>npp iimport<Space>numpy<Space>as<Space>np<Enter>import<Space>pandas<Space>as<Space>pd<Enter>import<Space>matplotlib.pyplot<Space>as<Space>plt<Enter><Esc>
+" Insert numpy, pandas, pyplot, sns
+:nnoremap <leader>npp iimport<Space>numpy<Space>as<Space>np<Enter>import<Space>pandas<Space>as<Space>pd<Enter><Enter>import<Space>matplotlib.pyplot<Space>as<Space>plt<Enter>plt.style.use('ggplot')<Enter>import<Space>seaborn<Space>as<Space>sns<Enter><Esc>
 :nnoremap <leader>np iimport<Space>numpy<Space>as<Space>np<Enter><Esc>
 :nnoremap <leader>pd iimport<Space>pandas<Space>as<Space>pd<Enter><Esc>
-:nnoremap <leader>plt iimport<Space>matplotlib.pyplot<Space>as<Space>plt<Enter><Esc>
+:nnoremap <leader>plt iimport<Space>matplotlib.pyplot<Space>as<Space>plt<Enter>plt.style.use('ggplot')<Enter>import<Space>seaborn<Space>as<Space>sns<Enter><Esc>
 
 """"""""""""""""""""""""""""""""""""""""
 " Text
@@ -97,14 +97,6 @@ call vundle#end()
 " Insert :nnoremap <leader>
 :nnoremap <leader>nl i:nnoremap<Space><leader<Space><Backspace>>
 
-" Delete all characters from current position to end of line
-" without moving next line
-:nnoremap <leader>4d v$hd
-
-" Cut all characters from current position to end of line
-" without moving next line
-:nnoremap <leader>4x v$hx
-
 " Insert ) before the next whitespace
 :nnoremap <leader>) Ea)<Esc>
 
@@ -113,6 +105,12 @@ call vundle#end()
 
 " Add a space beside comment delimiters in NERDcommenter
 let g:NERDSpaceDelims = 1
+
+""""""""""""""""""""""""""""""""""""""""
+" Python
+""""""""""""""""""""""""""""""""""""""""
+
+:nnoremap <leader>ifname iif __name__ == "__main__":<Enter><Tab>main()<Esc>
 
 """"""""""""""""""""""""""""""""""""""""
 " Latex
